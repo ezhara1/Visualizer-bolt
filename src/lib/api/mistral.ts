@@ -36,7 +36,7 @@ export async function analyzeWithMistral(text: string): Promise<string> {
       messages: [
         {
           role: "system",
-          content: "You are a helpful assistant that analyzes text and extracts events in chronological order. Return ONLY a JSON array in this format, with no additional text: [{\"title\": \"Event Title\", \"description\": \"Detailed description\", \"timestamp\": \"Time reference\"}]"
+          content: "You are a helpful assistant that analyzes text and extracts events in chronological order. Provide a detailed description of each event in no less than 100 words. Return ONLY a JSON array in this format, with no additional text: [{\"title\": \"Event Title\", \"description\": \"Detailed description\", \"timestamp\": \"Time reference\"}]"
         },
         {
           role: "user",
